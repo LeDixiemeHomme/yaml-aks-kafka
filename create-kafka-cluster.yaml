@@ -19,6 +19,14 @@ spec:
       transaction.state.log.replication.factor: 3
       transaction.state.log.min.isr: 2
       log.message.format.version: "2.5"
+    tlsSidecar:
+      resources:
+        requests:
+          cpu: 200m
+          memory: 64Mi
+        limits:
+          cpu: 500m
+          memory: 128Mi
     storage:
       type: jbod
       volumes:
@@ -34,6 +42,14 @@ spec:
       class: managed-premium
       size: 32Gi
       deleteClaim: false
+    tlsSidecar:
+      resources:
+        requests:
+          cpu: 200m
+          memory: 64Mi
+        limits:
+          cpu: 500m
+          memory: 128Mi
   entityOperator:
     topicOperator: {}
     userOperator: {}
