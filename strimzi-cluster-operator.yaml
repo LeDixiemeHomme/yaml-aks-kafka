@@ -3620,6 +3620,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: strimzi-cluster-operator-entity-operator-delegation
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 subjects:
@@ -3636,6 +3637,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: strimzi-cluster-operator
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 subjects:
@@ -3652,6 +3654,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: strimzi-cluster-operator-topic-operator-delegation
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 subjects:
@@ -3668,6 +3671,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kafkausers.kafka.strimzi.io
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 spec:
@@ -3803,6 +3807,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: strimzi-entity-operator
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 rules:
@@ -3855,6 +3860,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: strimzi-cluster-operator-global
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 rules:
@@ -3881,6 +3887,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: strimzi-cluster-operator-kafka-broker-delegation
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 subjects:
@@ -3897,6 +3904,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: strimzi-cluster-operator
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 subjects:
@@ -3913,6 +3921,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: strimzi-cluster-operator-namespaced
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 rules:
@@ -4187,6 +4196,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: strimzi-topic-operator
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 rules:
@@ -4214,6 +4224,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: strimzi-cluster-operator
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 
@@ -4222,6 +4233,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: strimzi-kafka-broker
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 rules:
@@ -4237,6 +4249,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kafkatopics.kafka.strimzi.io
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 spec:
@@ -4314,6 +4327,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kafkabridges.kafka.strimzi.io
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 spec:
@@ -4914,6 +4928,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: strimzi-cluster-operator
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 spec:
@@ -5010,6 +5025,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kafkaconnects2is.kafka.strimzi.io
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 spec:
@@ -5912,6 +5928,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kafkaconnects.kafka.strimzi.io
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 spec:
@@ -6803,6 +6820,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kafkamirrormakers.kafka.strimzi.io
+  namespace: uparser-kafka-queue
   labels:
     app: strimzi
 spec:
