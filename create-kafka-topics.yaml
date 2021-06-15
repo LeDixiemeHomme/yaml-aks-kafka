@@ -16,6 +16,7 @@ apiVersion: kafka.strimzi.io/v1beta1
 kind: KafkaTopic
 metadata:
   name: runner-out
+  namespace: uparser-kafka-queue
   labels:
     strimzi.io/cluster: kafka-cluster
 spec:
