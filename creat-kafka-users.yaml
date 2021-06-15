@@ -1,0 +1,23 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: KafkaUser
+metadata:
+  name: my-user
+  namespace: uparser-kafka-queue
+  labels:
+    strimzi.io/cluster: kafka-cluster
+spec:
+  authentication:
+    type: tls    # TLS Authentication
+  authorization:
+    type: simple   # Simple ACL Authorization
+    acls:
+      - resource:
+          type: topic
+          name: runner-in
+          patternType: literal
+        operation: All
+      - resource:
+          type: topic
+          name: runner-out
+          patternType: literal
+        operation: All
